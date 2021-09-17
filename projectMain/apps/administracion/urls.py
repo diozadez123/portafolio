@@ -14,4 +14,5 @@ urlpatterns = [
 
     path('add_user/', views.registerUser, name="add_user"),   
     path('', views.index, name="index"),
+    path('asdasd', views.index, name="index"),
 ]
