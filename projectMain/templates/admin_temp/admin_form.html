@@ -1,0 +1,30 @@
+{% extends 'base/base.html' %}
+{% block nameNavbar %} Administrador {% endblock %}
+{% block nameView %} Registro {% endblock%}
+
+{% block content %}
+
+
+    <div class="col-md-6" >
+
+        <form  action="/registrarUsuario/" method="POST">
+            {% csrf_token %}
+            <div class="form-group">
+                <label for="nombre" class="form-label">Ingrese Usuario</label>
+                <input type="text" name = 'username' class="form-control" placeholder="Usuario">
+            </div>
+            <div class="mb-3">
+                <label for="pasword">Ingrese Contraseña</label>
+                <input type="password" name = 'password'class="form-control" id="password" placeholder="Contraseña">
+            </div>
+            <div class="mb-3">
+                <label for="tipo_usuario"  class="form-label">Ingrese tipo de usuario</label>
+                <input type="text" class="form-control" name = 'tipouser' placeholder="tipo usuario">
+            </div>
+            <button type="submit" class="btn btn-dark">Guardar</button>
+            
+        </form>
+
+    </div>
+
+{% endblock %}

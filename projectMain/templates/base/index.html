@@ -1,0 +1,25 @@
+{% extends 'base/base.html' %}
+{% block nameNavbar%} {% endblock%}
+{% block nameView %} Inicio {% endblock %}
+
+{% block nameNav1 %} 
+
+    {% if request.user.is_authenticated %}
+    {% block login %}
+    Bienvenido
+    {% endblock %}
+    {% else %}
+        Login
+    {% endif %}
+
+{% endblock %}
+
+
+{% block nameNav2 %}  {% endblock %}
+{% if request.user.is_staff %}
+    <li class="nav-item">
+        <a class="nav-link" href="/">Administracionnnnnn</a>
+    </li>
+                  <a class="dropdown-item">Bodegaasdasdasd</a>
+{% endif %}
+{% block nameNav3 %}  {% endblock %}
